@@ -1,0 +1,29 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* HEADER */
+.Header {
+    display: flex;
+    grid-area: header;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+.NavUl {
+    display: flex;
+    list-style: none;
+
+}
+
+.NavUl-Link {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+}
