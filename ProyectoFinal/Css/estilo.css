@@ -3,16 +3,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  /* HEADER */
+/* HEADER */
 .Header {
     display: flex;
-    grid-area: header;
-    padding: 25px;
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    margin: 25px;
+    margin: 5px;
+    background-color: beige;
+}
+
+.Header-Logo{
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+.Header-LogoImagen{
+    width: 100px;
+    height: auto;
+    max-height: 100px;
+    display: block;
 }
 
 .NavUl {
@@ -25,5 +38,8 @@
     padding: 10px;
     text-decoration: none;
     color: black;
+}
 
+.NavUl-Link:hover {
+    color: #007bff;
 }
