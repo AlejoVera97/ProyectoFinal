@@ -10,11 +10,13 @@
     <script defer src="./Js/script.js"></script>
     <!--Vinculo CSS-->
     <link rel="stylesheet" href="./Css/estilo.css">
-    <!-- Fuentes -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=north_east">
+    <!-- Fuentes iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+
 
     <!-- Etiqutas meta-->
-     
+
     <!-- Descripción de la página -->
     <meta name="description" content="Venta de casas prefabricadas, muebles exteriores, carpintería a medida">
     <!-- Palabras clave -->
@@ -33,27 +35,109 @@
                 <img class="Header-LogoImagen" src="./Img/Logo/LogoVeraMaderas.jpg" alt="VeraMaderas">
             </a>
         </div>
+        <form class="Header-Busqueda" action="search.html" method="get">
+            <input type="text" class="Busqueda-Barra" name="q" placeholder="Buscar..." aria-label="Buscar">
+            <button type="submit" class="Busqueda-Boton">Buscar</button>
+        </form>
 
         <nav class="Header-Nav">
             <ul class="NavUl">
                 <li class="NavUl-Item">
-                    <a href="#" class="NavUl-Link">Servicios</a>
+                    <a href="#" class="NavUl-Link">Empresa</a>
                 </li>
                 <li class="NavUl-Item">
-                    <a href="#" class="NavUl-Link">Producto</a>
+                    <a href="#" class="NavUl-Link">Productos</a>
                 </li>
                 <li class="NavUl-Item">
-                    <a href="#" class="NavUl-Link">Contacto</a>
+                    <a href="#" class="NavUl-Link">Contactos</a>
                 </li>
             </ul>
         </nav>
+
+        <div class="Header-Iconos">
+            <a href="cart.html" class="Icono-Link">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+            <a href="favorites.html" class="Icono-Link">
+                <span class="material-symbols-outlined">favorite</span>
+            </a>
+            <a href="user-profile.html" class="Icono-Link">
+                <span class="material-symbols-outlined">account_circle</span>
+            </a>
+        </div>
     </header>
 
 
     <!-- MAIN -->
 
     <main class="Main">
+        <p class="Main-P">
+            Check out some of the stuff we have worked on with and work spanning across
+            serveral diferent mediums including digital prints, company branding & more.
+        </p>
 
+        <div class="Main-Grid">
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Muebles/JuegoJardin/Jardin2.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Muebles/JuegoJardin/Jardin3.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Cercos/Postes/Cerco1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Cercos/Postes/Cerco2.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Cercos/Postes/Cerco3.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Cercos/Maderas/CercoMadera1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Cercos/Maderas/CercoMadera2.jpg" alt="imagen1">
+
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Mesas/mesa1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Mesas/mesa2.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Muebles/Reposera/Reposera1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Muebles/Reposera/Reposera2.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Muebles/3Cuerpos/Sillon2.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Muebles/3Cuerpos/Sillon3.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Porteras/Portera1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Porteras/Portera2.jpg" alt="imagen1">
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+            <div class="Main-Grid-Item">
+                <img class="Main-Grid-Img" src="./Img/Pergolas/Pergola1.jpg" alt="imagen1">
+                <img class="Main-Grid-Img" src="./Img/Pergolas/Pergola2.jpg" alt="imagen1">
+
+                <button class="Slider-Btn-Anterior">Anterior</button>
+                <button class="Slider-Btn-Siguiente">Siguiente</button>
+            </div>
+        </div>
+        <div class="Button">
+            <span class="material-symbols-outlined">
+                north_east
+            </span>
+            <p class="Button-Text">
+                Show More
+            </p>
+        </div>
     </main>
 
 
