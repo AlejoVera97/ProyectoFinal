@@ -23,3 +23,21 @@ document.querySelectorAll('.Main-Grid-Item').forEach(item => {
     // Inicializa mostrando solo la primera imagen
     updateImageVisibility();
 });
+
+
+
+// Obtén todos los botones de la clase cta-boton
+const botones = document.querySelectorAll('.Cta-boton');
+
+// Función para agregar efecto de clic
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        // Agregar clase 'activo' cuando se hace clic
+        boton.classList.add('activo');
+
+        // Eliminar la clase 'activo' después de 0.2 segundos
+        setTimeout(() => {
+            boton.classList.remove('activo');
+        }, 200); // 200ms de duración
+    });
+});

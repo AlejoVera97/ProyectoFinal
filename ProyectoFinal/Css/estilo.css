@@ -13,10 +13,6 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
     min-height: 100vh;
     gap: 1rem;
     padding: 1rem;
@@ -32,18 +28,18 @@
     margin: 1em;
 }
 
-.Header-Logo{
+.Header-Logo {
     top: 0;
     left: 0;
     display: inline-block;
 }
 
-.Header-LogoImagen{
+.Header-LogoImagen {
     width: 100px;
     height: auto;
     max-height: 100px;
     display: block;
-    
+
 }
 
 .NavUl {
@@ -69,7 +65,7 @@
 }
 
 
-/* Busqueda */ 
+/* Busqueda */
 .Busqueda-Barra {
     padding: 5px 10px;
     border: 1px solid #ccc;
@@ -92,7 +88,7 @@
 
 
 
-/* Iconos */ 
+/* Iconos */
 .Header-Iconos {
     display: flex;
     align-items: center;
@@ -103,15 +99,19 @@
 .Icono-Link {
     text-decoration: none;
     color: #333;
-    font-size: 24px; /* Tamaño del ícono */
+    font-size: 24px;
+    /* Tamaño del ícono */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease; /* Efecto suave en hover */
+    transition: background-color 0.3s ease;
+    /* Efecto suave en hover */
 }
+
 .Icono-Link:hover,
 .Usuario-Link:hover {
-    color: #007bff; /* Cambia el color del ícono */
+    color: #007bff;
+    /* Cambia el color del ícono */
 }
 
 
@@ -130,23 +130,8 @@
     text-align: justify;
     font-size: 16px;
     line-height: 1.5;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-
-}
-
-.Main-Grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.Main-Grid-Img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .Main-Grid {
@@ -158,15 +143,15 @@
 
 .Main-Grid-Item {
     position: relative;
-    overflow: hidden; /* Oculta cualquier exceso de imagen */
-    width: 100%; /* Se ajusta al tamaño del contenedor */
+    overflow: hidden;
+    width: 100%;
     aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada */
     background-color: #f0f0f0; /* Color de fondo para relleno */
 }
 
 .Main-Grid-Img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -198,6 +183,106 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
+.Main-Grid-Iconos {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde el borde derecho */
+    display: flex;
+    flex-direction: column; /* Esto pone los íconos uno debajo del otro */
+    gap: 10px; /* Espacio entre los íconos */
+}
+
+.Main-Grid-Favorito,
+.Main-Grid-Carrito {
+    font-size: 20px; /* Tamaño de los íconos */
+}
+
+.Main-Grid-Favorito a,
+.Main-Grid-Carrito a {
+    color: white; /* Color de los íconos */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.Main-Grid-Favorito span,
+.Main-Grid-Carrito span {
+    font-size: inherit; /* Hereda el tamaño de la fuente del contenedor */
+    color: inherit; /* Hereda el color del contenedor */
+}
+
+.Main-Grid-Favorito span:hover,
+.Main-Grid-Carrito span:hover {
+    color: #FF4081; /* Cambia el color al pasar el ratón */
+}
+
+.Main-Grid-Precio {
+    position: absolute;
+    bottom: 10px; /* Coloca el precio en la parte inferior */
+    right: 10px; /* Colócalo en la esquina derecha */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para que el texto sea legible */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 18px; /* Tamaño del precio */
+}
+
+/*Cta */
+
+/* Sección de Llamada a la Acción */
+.Main-Section-Cta {
+    background-color: #020202b9; /* Fondo de color atractivo */
+    color: white; /* Texto blanco */
+    padding: 40px 20px; /* Espaciado alrededor */
+    text-align: center; /* Centra el contenido */
+}
+
+.Section-Container-Cta {
+    max-width: 900px; /* Limita el ancho para no ser demasiado grande */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.Cta-Heading {
+    font-size: 32px; /* Tamaño grande para el título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.Cta-P {
+    font-size: 18px; /* Tamaño del texto descriptivo */
+    margin-bottom: 30px; /* Espaciado debajo del texto */
+    line-height: 2; /* Espaciado entre líneas para mayor legibilidad */
+}
+
+.Cta-Botones {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.Cta-Boton {
+    background-color: #fcfafa; /* Fondo blanco */
+    color: #2d39e0; /* Texto en color rosado */
+    padding: 10px 20px; /* Aumenta el padding para hacer los botones más grandes */
+    font-size: 15px; /* Tamaño del texto */
+    font-weight: bold;
+    border-radius: 30px; /* Bordes redondeados para un diseño más suave */
+    border: 2px solid #2d39e0; /* Borde rosado */
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Para que el botón se comporte como un bloque pero se alinee con otros elementos */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+.cta-boton:hover {
+    background-color: #FF4081; /* Cambia el fondo a rosado */
+    color: white; /* Cambia el color del texto a blanco */
+    transform: translateY(-3px); /* Eleva ligeramente el botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+/* Efecto al hacer clic */
+.cta-boton.activo {
+    transform: scale(0.95); /* El botón se reduce ligeramente */
+    box-shadow: none; /* Elimina la sombra */
+}
 
 /* FOOTER */
 .Footer {
