@@ -284,12 +284,84 @@
     box-shadow: none; /* Elimina la sombra */
 }
 
-/* FOOTER */
 .Footer {
-    grid-area: footer;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid lightgray;
     align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid lightgray;
 }
+
+.Footer-P {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    width: 100%;
+}
+
+.Footer-Section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea un grid de 3 columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+    width: 100%;
+    justify-items: center
+}
+
+.Section-Sucursal {
+    background-color: #f0f0f0; /* Fondo claro para cada sucursal */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.Sucursal-Nombre {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.Sucursal p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.Sucursal-Mapa {
+    display: inline-block;
+    color: #FF4081;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.Sucursal-Mapa:hover {
+    text-decoration: underline;
+}
+
+.Footer-Nav {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.NavUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.NavUl-Link {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.NavUl-Link:hover {
+    color: #FF4081;
+}
+
+
