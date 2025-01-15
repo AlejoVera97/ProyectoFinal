@@ -230,7 +230,7 @@
 
 /* Sección de Llamada a la Acción */
 .Main-Section-Cta {
-    background-color: #020202b9; /* Fondo de color atractivo */
+    background-color:  #f39c12;; /* Fondo de color atractivo */
     color: white; /* Texto blanco */
     padding: 40px 20px; /* Espaciado alrededor */
     text-align: center; /* Centra el contenido */
@@ -260,24 +260,19 @@
 }
 
 .Cta-Boton {
-    background-color: #fcfafa; /* Fondo blanco */
-    color: #2d39e0; /* Texto en color rosado */
-    padding: 10px 20px; /* Aumenta el padding para hacer los botones más grandes */
-    font-size: 15px; /* Tamaño del texto */
-    font-weight: bold;
-    border-radius: 30px; /* Bordes redondeados para un diseño más suave */
-    border: 2px solid #2d39e0; /* Borde rosado */
-    text-decoration: none; /* Quita el subrayado */
-    display: inline-block; /* Para que el botón se comporte como un bloque pero se alinee con otros elementos */
-    transition: all 0.3s ease; /* Transición suave para efectos */
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    background-color: #2980b9;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
-.Cta-boton:hover {
-    background-color: #FF4081; /* Cambia el fondo a rosado */
-    color: white; /* Cambia el color del texto a blanco */
-    transform: translateY(-3px); /* Eleva ligeramente el botón */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+.Cta-Boton:hover {
+    background-color: #1f6fa5;
 }
+
 
 .Cta-boton.activo {
     transform: scale(0.95); /* El botón se reduce ligeramente */
