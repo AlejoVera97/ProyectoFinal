@@ -21,6 +21,7 @@
 
 /* HEADER */
 .Header {
+   
     display: flex;
     padding: 1em;
     justify-content: space-between;
@@ -271,19 +272,20 @@
     transition: all 0.3s ease; /* Transición suave para efectos */
     cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
 }
-.cta-boton:hover {
+.Cta-boton:hover {
     background-color: #FF4081; /* Cambia el fondo a rosado */
     color: white; /* Cambia el color del texto a blanco */
     transform: translateY(-3px); /* Eleva ligeramente el botón */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
 }
 
-/* Efecto al hacer clic */
-.cta-boton.activo {
+.Cta-boton.activo {
     transform: scale(0.95); /* El botón se reduce ligeramente */
     box-shadow: none; /* Elimina la sombra */
 }
 
+
+/* FOOTER*/ 
 .Footer {
     padding: 1rem;
     display: flex;

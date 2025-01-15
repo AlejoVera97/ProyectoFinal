@@ -1,0 +1,85 @@
+/* Estilos generales para el contenedor principal */
+.Main-Favoritos {
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Título de la sección de favoritos */
+.Favoritos-Titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de cada producto */
+.Producto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo de la imagen del producto */
+.Producto-Imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilo de la información del producto */
+.Producto-Info {
+    padding: 15px;
+}
+
+/* Nombre y descripción del producto */
+.Producto-Nombre {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.Producto-Descripcion {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilo de los botones */
+.Producto-Acciones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.Producto-Boton,
+.Producto-Boton-Eliminar {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Producto-Boton:hover,
+.Producto-Boton-Eliminar:hover {
+    background-color: #e04d41;
+}
+
+.Producto-Boton-Eliminar {
+    background-color: #f44336;
+}
+
+.Producto-Boton-Eliminar:hover {
+    background-color: #e53935;
+}

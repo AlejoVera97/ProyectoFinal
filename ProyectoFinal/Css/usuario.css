@@ -1,0 +1,80 @@
+.Principal {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f8f9fa;
+}
+
+/* Botones de Alternancia */
+.Botones-Toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.Boton-Toggle {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Boton-Toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Formularios */
+.Seccion-Autenticacion {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.Tarjeta-Autenticacion {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Tarjeta-Autenticacion.activo {
+    display: block;
+}
+
+.Formulario-Autenticacion label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.Formulario-Autenticacion input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.Boton-Autenticacion {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    borde
+}
+
+.Boton-Toggle.seleccionado {
+    background-color:#0056b3; /* Color más oscuro para el botón seleccionado */
+    color: #fff; /* Asegúrate de que el texto siga siendo visible */
+    border: 2px solid #003f7f; /* Opcional: Añadir un borde para destacarlo */
+}
