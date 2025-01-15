@@ -41,3 +41,33 @@ botones.forEach(boton => {
         }, 200); // 200ms de duración
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener el ícono de agregar a favoritos
+    const botonFavorito = document.getElementById('Favorito-Agregar');
+    
+    // Detalles del producto (esto puede venir dinámicamente desde el servidor)
+    const producto = {
+        nombre: "Juego de jardín",
+        precio: "$350.00",
+        imagen: "./Img/Muebles/JuegoJardin/Jardin2.jpg",
+    };
+
+    // Evento de clic para agregar a favoritos
+    botonFavorito.addEventListener('click', function () {
+        // Obtener los favoritos del localStorage
+        let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+        // Agregar el producto a la lista de favoritos
+        favoritos.push(producto);
+
+        // Guardar los favoritos en localStorage
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+        // Redirigir al usuario a la página de favoritos
+        window.location.href = 'favorites.html';
+    });
+});
+

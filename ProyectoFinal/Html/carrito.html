@@ -7,10 +7,10 @@
     <title>Vera Maderas</title>
 
     <!--Vinculo JS-->
-    <script defer src="../Js/favorito.js"></script>
+    <script defer src="../Js/carrito.js"></script>
     <!--Vinculo CSS-->
     <link rel="stylesheet" href="../Css/estilo.css">
-    <link rel="stylesheet" href="../Css/favorito.css">
+    <link rel="stylesheet" href="../Css/carrito.css">
     <!-- Fuentes iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -30,7 +30,7 @@
     <!-- HEADER-->
     <header class="Header">
         <div class="Header-Logo">
-            <a href="../index.html">
+            <a href="/ProyectoFinal/index.html">
                 <img class="Header-LogoImagen" src="../Img/Logo/LogoVeraMaderas.jpg" alt="VeraMaderas">
             </a>
         </div>
@@ -54,51 +54,39 @@
         </nav>
 
         <div class="Header-Iconos">
-            <a href="cart.html" class="Icono-Link">
+            <a href="./carrito.html" class="Icono-Link">
                 <span class="material-symbols-outlined">shopping_cart</span>
             </a>
-            <a href="../Html/favorito.html" class="Icono-Link">
+            <a href="./favorito.html" class="Icono-Link">
                 <span class="material-symbols-outlined">star</span>
             </a>
-            <a href="../Html/usuario.html" class="Icono-Link">
+            <a href="./usuario.html" class="Icono-Link">
                 <span class="material-symbols-outlined">account_circle</span>
             </a>
         </div>
     </header>
-    <main class="Main-Favoritos">
-        <section class="Favoritos-Listado">
-            <h2 class="Favoritos-Titulo">Productos Favoritos</h2>
 
-            <div class="Producto" id="productos-favoritos">
-                <img src="../Img/Productos/producto1.jpg" alt="Producto 1" class="Producto-Imagen">
-                <div class="Producto-Info">
-                    <h3 class="Producto-Nombre">Producto 1</h3>
-                    <p class="Producto-Descripcion">Descripción breve del producto 1.</p>
-                    <div class="Producto-Acciones">
-                        <button class="Producto-Boton">Ver más</button>
-                        <button class="Producto-Boton-Eliminar">Eliminar de favoritos</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Producto">
-                <img src="../Img/Productos/producto2.jpg" alt="Producto 2" class="Producto-Imagen">
-                <div class="Producto-Info">
-                    <h3 class="Producto-Nombre">Producto 2</h3>
-                    <p class="Producto-Descripcion">Descripción breve del producto 2.</p>
-                    <div class="Producto-Acciones">
-                        <button class="Producto-Boton">Ver más</button>
-                        <button class="Producto-Boton-Eliminar">Eliminar de favoritos</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Aquí puedes añadir más productos siguiendo la misma estructura -->
-        </section>
+    <main class="Main-Carrito">
+        <h2>Tu Carrito de Compras</h2>
+        
+        <!-- Contenedor para los productos en el carrito -->
+        <div id="productos-carrito" class="Carrito-Productos"></div>
+    
+        <!-- Sección para el total -->
+        <div class="Carrito-Total">
+            <h3>Total</h3>
+            <span id="total-carrito">$0.00</span>
+        </div>
+    
+        <!-- Botón para proceder a la compra -->
+        <div class="Carrito-BotonCompra">
+            <a href="checkout.html" class="Carrito-BotonCompra-Link">Proceder a la compra</a>
+        </div>
     </main>
+    
 
-    <!-- FOOTER -->
-    <footer class="Footer">
+      <!-- FOOTER -->
+      <footer class="Footer">
         <section class="Footer-Section">
             <div class="Sucursal">
                 <h3 class="Sucursal-Nombre">MALDONADO</h3>
