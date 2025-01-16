@@ -119,149 +119,120 @@
 
 
 /*MAIN*/
-/* Contenedor del slider */
-.slider {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Altura del slider */
-    overflow: hidden;
-    margin-top: 50px;
-}
 
-/* Contenedor de las diapositivas */
-.slider-container {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    height: 100%;
-}
-
-/* Estilo de cada diapositiva */
-.slide {
-    width: 100%;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-/* Estilo de la imagen dentro de cada diapositiva */
-
-    .slide-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center; /* Asegura que la imagen se centre si tiene exceso */
-        z-index: -1;
-    }
-
-
-/* Estilo del título */
-.slide h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    z-index: 1;
-}
-
-/* Estilo del texto */
-.slide p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    width: 60%;
-    text-align: center;
-    z-index: 1;
-}
-
-/* Estilo del botón Info */
-.info-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1;
-}
-
-.info-button:hover {
-    background-color: #45a049;
-}
-
-/* Puntos de navegación */
-.dots-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #bbb;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #717171;
-}
-
-
-
-/* Section de empresa */ 
-
-.Main-Section{
-    margin: 50px auto;
+/* MAIN */
+.Main {
+    margin: 30px auto;
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
     text-align: center;
-    background-color: #f9f9f9; /* Fondo claro */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.Section-Titulo{
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333; /* Color del texto */
-}
-
-.Section-P{
-    font-size: 1.2rem;
+.Main-P {
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    padding: 10px 0;
 }
 
-.Section-Link {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #4CAF50; /* Verde */
-    text-decoration: none;
+.Main-P:hover {
+    color: #333; /* Color más oscuro al pasar el mouse */
+}
+
+.Main-Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ajusta las columnas según tus necesidades */
+    gap: 20px;
+    padding: 20px;
+}
+
+.Main-Grid-Item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada */
+    background-color: #f0f0f0; /* Color de fondo para relleno */
+}
+
+.Main-Grid-Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Slider-Btn-Anterior,
+.Slider-Btn-Siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.Section-Link:hover {
-    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+.Slider-Btn-Anterior {
+    left: 10px;
 }
 
+.Slider-Btn-Siguiente {
+    right: 10px;
+}
 
+.Slider-Btn-Anterior:hover,
+.Slider-Btn-Siguiente:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
+.Main-Grid-Iconos {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde el borde derecho */
+    display: flex;
+    flex-direction: column; /* Esto pone los íconos uno debajo del otro */
+    gap: 10px; /* Espacio entre los íconos */
+}
 
+.Main-Grid-Favorito,
+.Main-Grid-Carrito {
+    font-size: 20px; /* Tamaño de los íconos */
+}
+
+.Main-Grid-Favorito a,
+.Main-Grid-Carrito a {
+    color: white; /* Color de los íconos */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.Main-Grid-Favorito span,
+.Main-Grid-Carrito span {
+    font-size: inherit; /* Hereda el tamaño de la fuente del contenedor */
+    color: inherit; /* Hereda el color del contenedor */
+}
+
+.Main-Grid-Favorito span:hover,
+.Main-Grid-Carrito span:hover {
+    color: #FF4081; /* Cambia el color al pasar el ratón */
+}
+
+.Main-Grid-Precio {
+    position: absolute;
+    bottom: 10px; /* Coloca el precio en la parte inferior */
+    right: 10px; /* Colócalo en la esquina derecha */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para que el texto sea legible */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 18px; /* Tamaño del precio */
+}
+
+/*Cta */
 
 /* Sección de Llamada a la Acción */
 .Main-Section-Cta {
