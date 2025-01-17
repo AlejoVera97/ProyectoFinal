@@ -26,48 +26,39 @@ document.querySelectorAll('.Main-Grid-Item').forEach(item => {
 
 
 
-// Obtén todos los botones de la clase cta-boton
-const botones = document.querySelectorAll('.Cta-boton');
-
-// Función para agregar efecto de clic
-botones.forEach(boton => {
-    boton.addEventListener('click', () => {
-        // Agregar clase 'activo' cuando se hace clic
-        boton.classList.add('activo');
-
-        // Eliminar la clase 'activo' después de 0.2 segundos
-        setTimeout(() => {
-            boton.classList.remove('activo');
-        }, 200); // 200ms de duración
-    });
-});
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtener el ícono de agregar a favoritos
-    const botonFavorito = document.getElementById('Favorito-Agregar');
+// Cargar el archivo JSON
+fetch('../Json/bd.json')
+  .then(response => response.json())
+  .then(data => {
+    const productos = data.productos;
     
-    // Detalles del producto (esto puede venir dinámicamente desde el servidor)
-    const producto = {
-        nombre: "Juego de jardín",
-        precio: "$350.00",
-        imagen: "./Img/Muebles/JuegoJardin/Jardin2.jpg",
-    };
+    // Función para agregar un producto al carrito
+    function agregarAlCarrito(productoId) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      
+      // Buscar el producto en la base de datos
+      const producto = productos.find(p => p.id === productoId);
+      if (producto) {
+        // Agregar el producto al carrito
+        carrito.push(producto);
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+      }
+    }
 
-    // Evento de clic para agregar a favoritos
-    botonFavorito.addEventListener('click', function () {
-        // Obtener los favoritos del localStorage
-        let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-        // Agregar el producto a la lista de favoritos
-        favoritos.push(producto);
-
-        // Guardar los favoritos en localStorage
-        localStorage.setItem('favoritos', JSON.stringify(favoritos));
-
-        // Redirigir al usuario a la página de favoritos
-        window.location.href = 'favorites.html';
+    // Asociar el evento de clic para agregar productos al carrito
+    document.getElementById('Carrito-Agregar').addEventListener('click', function() {
+      // Cambia el id del producto de acuerdo al que el usuario haya seleccionado
+      agregarAlCarrito(1); // Aquí debes poner el id del producto específico
     });
-});
+  })
+  .catch(error => console.log('Error al cargar el archivo JSON: ', error));
+
+
+
+
+
+
 
