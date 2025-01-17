@@ -28,33 +28,6 @@ document.querySelectorAll('.Main-Grid-Item').forEach(item => {
 
 
 
-// Cargar el archivo JSON
-fetch('../Json/bd.json')
-  .then(response => response.json())
-  .then(data => {
-    const productos = data.productos;
-    
-    // Función para agregar un producto al carrito
-    function agregarAlCarrito(productoId) {
-      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      
-      // Buscar el producto en la base de datos
-      const producto = productos.find(p => p.id === productoId);
-      if (producto) {
-        // Agregar el producto al carrito
-        carrito.push(producto);
-        // Guardar el carrito actualizado en localStorage
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-      }
-    }
-
-    // Asociar el evento de clic para agregar productos al carrito
-    document.getElementById('Carrito-Agregar').addEventListener('click', function() {
-      // Cambia el id del producto de acuerdo al que el usuario haya seleccionado
-      agregarAlCarrito(1); // Aquí debes poner el id del producto específico
-    });
-  })
-  .catch(error => console.log('Error al cargar el archivo JSON: ', error));
 
 
 
