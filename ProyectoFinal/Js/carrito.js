@@ -1,21 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const contenedorCarrito = document.getElementById('productos-en-carrito');
 
-    if (carrito.length === 0) {
-        contenedorCarrito.innerHTML = "<p>No hay productos en el carrito.</p>";
-    } else {
-        carrito.forEach(producto => {
-            const divProducto = document.createElement('div');
-            divProducto.innerHTML = `
-                <h3>${producto.nombre}</h3>
-                <p>${producto.descripcion}</p>
-                <p>Precio: $${producto.precio}</p>
-            `;
-            contenedorCarrito.appendChild(divProducto);
-        });
-    }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Vaciar el carrito en localStorage
         localStorage.removeItem('carrito');
         // Actualizar la visualización del carrito
-        const contenedorCarrito = document.getElementById('productos-en-carrito');
+        const contenedorCarrito = document.getElementById('contenedor-carrito');
         contenedorCarrito.innerHTML = '<p>No hay productos en el carrito.</p>';
         document.getElementById('total-carrito').textContent = '$0.00';
         alert('El carrito ha sido vaciado.');
