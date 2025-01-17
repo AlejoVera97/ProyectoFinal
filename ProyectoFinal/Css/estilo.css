@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-/*BODY*/
 
+/*BODY*/
 .Body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: white;
@@ -21,59 +21,46 @@
 
 /* HEADER */
 .Header {
-   
     display: flex;
     padding: 1em;
     justify-content: space-between;
     align-items: center;
     margin: 1em;
 }
-
 .Header-Logo {
     top: 0;
     left: 0;
     display: inline-block;
 }
-
 .Header-LogoImagen {
     width: 100px;
     height: auto;
     max-height: 100px;
     display: block;
-
 }
-
 .NavUl {
     display: flex;
     list-style: none;
-
 }
-
 .NavUl-Link {
     padding: 10px;
     text-decoration: none;
     color: black;
 }
 
-.NavUl-Link:hover {
-    color: #007bff;
-}
 
 
+/* Barra de Busqueda */
 .Header-Busqueda {
     display: flex;
     align-items: center;
 }
-
-
-/* Busqueda */
 .Busqueda-Barra {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 5px;
 }
-
 .Busqueda-Boton {
     padding: 5px 10px;
     border: none;
@@ -82,37 +69,30 @@
     border-radius: 4px;
     cursor: pointer;
 }
-
 .Busqueda-Boton:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
 
 
-/* Iconos */
+/* Iconos: Carrito, Favorito y Usuario */
 .Header-Iconos {
     display: flex;
     align-items: center;
     margin-right: 1rem;
     gap: 2rem;
 }
-
 .Icono-Link {
     text-decoration: none;
     color: #333;
     font-size: 24px;
-    /* Tamaño del ícono */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
-    /* Efecto suave en hover */
 }
-
-.Icono-Link:hover,
-.Usuario-Link:hover {
+.Icono-Link:hover{
     color: #007bff;
-    /* Cambia el color del ícono */
 }
 
 
@@ -123,7 +103,7 @@
 .slider {
     position: relative;
     width: 100%;
-    height: 500px; /* Altura del slider */
+    height: 500px; 
     overflow: hidden;
     margin-top: 50px;
 }
@@ -149,7 +129,6 @@
 }
 
 /* Estilo de la imagen dentro de cada diapositiva */
-
     .slide-image {
         position: absolute;
         top: 0;
@@ -157,7 +136,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center; /* Asegura que la imagen se centre si tiene exceso */
+        object-position: center; 
         z-index: -1;
     }
 
@@ -190,7 +169,6 @@
     transition: background-color 0.3s ease;
     z-index: 1;
 }
-
 .info-button:hover {
     background-color: #45a049;
 }
@@ -203,7 +181,6 @@
     transform: translateX(-50%);
     display: flex;
 }
-
 .dot {
     width: 10px;
     height: 10px;
@@ -212,7 +189,6 @@
     margin: 0 5px;
     cursor: pointer;
 }
-
 .dot.active {
     background-color: #717171;
 }
@@ -220,13 +196,12 @@
 
 
 /* Section de empresa */ 
-
 .Main-Section{
     margin: 50px auto;
     padding: 20px;
     max-width: 800px;
     text-align: center;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #f9f9f9; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -234,7 +209,7 @@
 .Section-Titulo{
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333; /* Color del texto */
+    color: #333;
 }
 
 .Section-P{
@@ -249,22 +224,22 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .Section-Link:hover {
-    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    background-color: #45a049; 
 }
 
 /* Section de maderas */ 
-/* Contenedor principal */
+
 .hover-slider {
     position: relative;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: 400px; /* Ajusta la altura según el diseño */
+    width: 100%; 
+    height: 400px;
     overflow: hidden;
     
 }
@@ -279,18 +254,18 @@
 /* Contenedor de cada imagen */
 .hover-slide {
     position: relative;
-    flex: 0 0 19%; /* Esto asegura que cada slide ocupe el 20% del ancho */
-    height: 100%; /* Igualamos la altura de todos los slides */
+    flex: 0 0 19%; 
+    height: 100%; 
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-/* Imagen dentro del slide */
+
 .hover-slide img {
-    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
-    height: 100%; /* La imagen ocupa el 100% de la altura del contenedor */
-    object-fit: cover; /* La imagen se ajusta sin distorsionar */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
     transition: transform 0.3s ease;
 }
 
@@ -298,40 +273,29 @@
 .hover-slide:hover img {
     transform: scale(1.2);
 }
-
-/* Estilo del texto que aparece al pasar el mouse */
 .hover-slide-text {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: white;
     padding: 10px;
     border-radius: 5px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    width: calc(100% - 20px); /* Alineamos el texto con el contenedor */
+    width: calc(100% - 20px); 
 }
-
-/* Cuando el mouse pasa por encima, se muestra el texto */
 .hover-slide:hover .hover-slide-text {
     opacity: 1;
 }
-
-/* Estilos del título */
 .hover-slide-text h3 {
     margin: 0;
     font-size: 1.5rem;
 }
-
-/* Estilos de la descripción */
 .hover-slide-text p {
     margin: 5px 0 0;
     font-size: 1rem;
 }
-
-
-
 
 
 
@@ -345,7 +309,6 @@
     flex-wrap: wrap;
     border-top: 1px solid lightgray;
 }
-
 .Footer-P {
     font-size: 14px;
     color: #666;
@@ -355,18 +318,18 @@
 
 .Footer-Section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea un grid de 3 columnas */
-    gap: 20px; /* Espacio entre las columnas */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     padding: 20px;
     width: 100%;
     justify-items: center
 }
 
 .Section-Sucursal {
-    background-color: #f0f0f0; /* Fondo claro para cada sucursal */
+    background-color: #f0f0f0; 
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Sucursal-Nombre {
@@ -414,7 +377,7 @@
 }
 
 .NavUl-Link:hover {
-    color: #FF4081;
+    color:#007bff;
 }
 
 

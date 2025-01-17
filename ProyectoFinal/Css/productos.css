@@ -112,7 +112,6 @@
 .Icono-Link:hover,
 .Usuario-Link:hover {
     color: #007bff;
-    /* Cambia el color del ícono */
 }
 
 
@@ -138,12 +137,12 @@
 }
 
 .Main-P:hover {
-    color: #333; /* Color más oscuro al pasar el mouse */
+    color: #333; 
 }
 
 .Main-Grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Ajusta las columnas según tus necesidades */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     padding: 20px;
 }
@@ -152,9 +151,12 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada */
+    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada 
+    */
     background-color: #f0f0f0; /* Color de fondo para relleno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 
 .Main-Grid-Img {
     width: 100%;
@@ -236,10 +238,10 @@
 
 /* Sección de Llamada a la Acción */
 .Main-Section-Cta {
-    background-color:  #f39c12;; /* Fondo de color atractivo */
-    color: white; /* Texto blanco */
-    padding: 40px 20px; /* Espaciado alrededor */
-    text-align: center; /* Centra el contenido */
+    background-color:  #f39c12;; 
+    color: white; 
+    padding: 40px 20px; 
+    text-align:center; 
 }
 
 .Section-Container-Cta {
