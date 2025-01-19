@@ -12,8 +12,8 @@
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%; /* El formulario ocupa el 60% del ancho */
-    margin: 0 auto; /* Centra horizontalmente */
+    width: 60%; 
+    margin: 0 auto; 
 }
 
 .Formulario-Titulo {

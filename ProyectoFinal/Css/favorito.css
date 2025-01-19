@@ -4,12 +4,12 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #f4f4f4; /* Fondo gris claro */
+    background-color: #f4f4f4; 
 }
 
 /* Estilo para la lista de productos favoritos */
 .Favoritos-Listado {
-    max-width: 1200px; /* Limitar el ancho máximo */
+    max-width: 1200px; 
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -21,7 +21,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-items: center; /* Centra los items dentro de cada celda */
+    justify-items: center; 
     margin-top: 20px;
 }
 
@@ -29,7 +29,7 @@
 .Producto-Favorito {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Acomoda los elementos con espacio entre ellos */
+    justify-content: space-between; 
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
