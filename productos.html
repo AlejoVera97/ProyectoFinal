@@ -7,11 +7,10 @@
     <title>Vera Maderas</title>
 
     <!--Vinculo JS-->
-    <script defer src="../Js/favorito.js"></script>
-
+    <script defer src="./js/producto.js"></script>
     <!--Vinculo CSS-->
-    <link rel="stylesheet" href="../Css/estilo.css">
-    <link rel="stylesheet" href="../Css/favorito.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/productos.css">
     <!-- Fuentes iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <!--Funtes redes sociales -->
@@ -32,7 +31,7 @@
     <!-- HEADER-->
     <header class="Header">
         <div class="Header-Logo">
-            <a href="../index.html">
+            <a href="/index.html">
                 <img class="Header-LogoImagen" src="../Img/Logo/LogoVeraMaderas.jpg" alt="VeraMaderas">
             </a>
         </div>
@@ -44,13 +43,13 @@
         <nav class="Header-Nav">
             <ul class="NavUl">
                 <li class="NavUl-Item">
-                    <a href="./empresa.html" class="NavUl-Link">Empresa</a>
+                    <a href="/empresa.html" class="NavUl-Link">Empresa</a>
                 </li>
                 <li class="NavUl-Item">
-                    <a href="./productos.html" class="NavUl-Link">Productos</a>
+                    <a href="/productos.html" class="NavUl-Link">Productos</a>
                 </li>
                 <li class="NavUl-Item">
-                    <a href="./contactos.html" class="NavUl-Link">Contactos</a>
+                    <a href="/contactos.html" class="NavUl-Link">Contactos</a>
                 </li>
             </ul>
         </nav>
@@ -59,23 +58,48 @@
             <a href="./carrito.html" class="Icono-Link">
                 <span class="material-symbols-outlined">shopping_cart</span>
             </a>
-            <a href="/Html/favorito.html" class="Icono-Link">
+            <a href="./favorito.html" class="Icono-Link">
                 <span class="material-symbols-outlined">star</span>
             </a>
-            <a href="/Html/usuario.html" class="Icono-Link">
+            <a href="./usuario.html" class="Icono-Link">
                 <span class="material-symbols-outlined">account_circle</span>
             </a>
         </div>
     </header>
-    <main class="Main-Favoritos">
-    
-       
-            <h2>Productos Favoritos</h2>
-            <div id="contenedor-favorito"></div>
-       
-   
-    </main>     
-    
+
+
+    <!-- MAIN -->
+
+    <main class="Main">
+        <h2 class="Main-Titulo">Productos</h2>
+        <p class="Main-P">
+            En Vera Maderas ofrecemos una amplia gama de productos fabricados con madera de alta calidad. Desde muebles
+            personalizados hasta estructuras como cercas, pérgolas y mesas, cada pieza es creada para aportar
+            funcionalidad
+            y belleza a cualquier espacio. Nos especializamos en la creación de diseños únicos que combinan tradición y
+            modernidad, garantizando productos duraderos y estéticamente atractivos.
+        </p>
+    </main>
+
+
+    <div class="Main-Grid">
+        
+    </div>
+
+    <section class="Main-Section-Cta">
+        <div class="Section-Container-Cta">
+            <h2 class="Cta-Heading">¡No te lo pierdas!</h2>
+            <p class="Cta-P">Suscríbete a nuestro boletín y mantente al día con las últimas novedades y ofertas
+                exclusivas.</p>
+            <div class="Cta-Botones">
+                <a class="Cta-Boton" href="./usuario.html">Suscríbete ahora</a>
+                <a class=" Cta-Boton" href="./productos.html">Compra ahora</a>
+            </div>
+        </div>
+    </section>
+
+
+    </main>
 
 
     <!-- FOOTER -->
@@ -83,10 +107,12 @@
         <section class="Footer-Section">
             <div class="Sucursal">
                 <h3 class="Sucursal-Nombre">MALDONADO</h3>
-                <p class="Sucursal-Horarios">Lunes a viernes de 8hs. a 12hs. y de 13:30 a 17:30.<br>Sábados de 9hs. a 13hs.</p>
+                <p class="Sucursal-Horarios">Lunes a viernes de 8hs. a 12hs. y de 13:30 a 17:30.<br>Sábados de 9hs. a
+                    13hs.</p>
                 <p class="Sucursal-Telefono">T: (+598) 4222 0492</p>
                 <p class="Sucursal-Direccion">Av. J Batlle y Ordoñez y Ruta 39.<br>Maldonado, Uruguay</p>
-                <a href="https://www.google.com/maps/place/Maldonado,+Maldonado+Department,+Uruguay/" class="Sucursal-Mapa">Ver ubicación</a>
+                <a href="https://www.google.com/maps/place/Maldonado,+Maldonado+Department,+Uruguay/"
+                    class="Sucursal-Mapa">Ver ubicación</a>
             </div>
 
             <div class="Sucursal">
@@ -94,8 +120,8 @@
                 <p class="Sucursal-Horarios">Lunes a Viernes de 8hs a 17hs.</p>
                 <p class="Sucursal-Telefono">T: (+598) 2200 0845 int.1</p>
                 <p class="Sucursal-Direccion">Democracia 2350.<br>Rocha, Uruguay.</p>
-                <a href="https://www.google.com/maps/place/Rocha,+Rocha+Department,+Uruguay/" class="Sucursal-Mapa">Ver ubicación</a>
-
+                <a href="https://www.google.com/maps/place/Rocha,+Rocha+Department,+Uruguay/" class="Sucursal-Mapa">Ver
+                    ubicación</a>
             </div>
 
             <div class="Sucursal">
@@ -103,7 +129,8 @@
                 <p class="Sucursal-Horarios">Lunes a Viernes de 8hs a 17hs.</p>
                 <p class="Sucursal-Telefono">T: (+598) 2200 0845 int. 2</p>
                 <p class="Sucursal-Direccion">Perez del Puerto 2319.<br>La Paloma, Uruguay.</p>
-                <a href="https://www.google.com/maps/place/La+Paloma,+Rocha+Department,+Uruguay/" class="Sucursal-Mapa">Ver ubicación</a>
+                <a href="https://www.google.com/maps/place/La+Paloma,+Rocha+Department,+Uruguay/"
+                    class="Sucursal-Mapa">Ver ubicación</a>
             </div>
         </section>
 
@@ -115,7 +142,6 @@
             </ul>
         </div>
     </footer>
-
 
 </body>
 

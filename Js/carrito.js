@@ -9,10 +9,10 @@ const btnCancelarCompra = document.getElementById('cancelar-compra');
  // Eventos
 document.addEventListener('DOMContentLoaded', function () {
     btnProcederCompra.addEventListener('click', function () {
-        window.location.href = '../Html/procesoCompra.html';
+        window.location.href = './procesoCompra.html';
     });
     btnVolverProductos.addEventListener('click', function () {
-        window.location.href = '../Html/productos.html';
+        window.location.href = '/productos.html';
     });
     btnCancelarCompra.addEventListener('click', function () {
         localStorage.removeItem('carrito');
