@@ -1,5 +1,9 @@
-document.getElementById("formulario-compra").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita el envío del formulario para validación
+// 1) Variables y Constantes
+const formularioCompra = document.getElementById("formulario-compra");
+
+// 2) Eventos
+formularioCompra.addEventListener("submit", function (event) {
+    event.preventDefault(); 
 
     // Obtener los valores de los campos
     const nombre = document.getElementById("nombre").value;
@@ -14,12 +18,39 @@ document.getElementById("formulario-compra").addEventListener("submit", function
     const metodoPago = document.getElementById("metodo-pago").value;
 
     // Validación simple de campos
-    if (!nombre || !email || !telefono || !direccion || !ciudad || !codigoPostal || !tarjeta || !fechaExpiracion || !codigoSeguridad || !metodoPago) {
+    if (!validarCampos(
+        nombre, email, telefono, direccion, ciudad, 
+        codigoPostal, tarjeta, fechaExpiracion, codigoSeguridad, metodoPago
+    )) {
         alert("Por favor, complete todos los campos.");
         return;
     }
 
-    // Mostrar mensaje de éxito o fallo de validación
+    // Mostrar mensaje de éxito
+    mostrarResumenPedido(
+        nombre, email, telefono, direccion, ciudad, 
+        codigoPostal, metodoPago, tarjeta
+    );
+    alert("¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.");
+});
+
+// 3) Funciones
+// Validar que todos los campos estén completos
+function validarCampos(
+    nombre, email, telefono, direccion, ciudad, 
+    codigoPostal, tarjeta, fechaExpiracion, codigoSeguridad, metodoPago
+) {
+    return (
+        nombre && email && telefono && direccion && ciudad &&
+        codigoPostal && tarjeta && fechaExpiracion && codigoSeguridad && metodoPago
+    );
+}
+
+// Mostrar el resumen del pedido
+function mostrarResumenPedido(
+    nombre, email, telefono, direccion, ciudad, 
+    codigoPostal, metodoPago, tarjeta
+) {
     const resumenPedido = `
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Correo electrónico:</strong> ${email}</p>
@@ -30,27 +61,5 @@ document.getElementById("formulario-compra").addEventListener("submit", function
         <p><strong>Método de pago:</strong> ${metodoPago}</p>
         <p><strong>Tarjeta (últimos 4 dígitos):</strong> ${tarjeta.slice(-4)}</p>
     `;
-
-    // Mostrar el resumen de la compra
     document.getElementById("resumen-pedido").innerHTML = resumenPedido;
-
-    // Mostrar un mensaje de confirmación
-    alert("¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.");
-
-    // Aquí podrías añadir código para enviar los datos a un servidor si es necesario, por ejemplo:
-    // fetch("/procesar-compra", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //         nombre, email, telefono, direccion, ciudad, codigoPostal, tarjeta, fechaExpiracion, codigoSeguridad, metodoPago
-    //     }),
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     }
-    // }).then(response => response.json()).then(data => {
-    //     console.log(data);
-    //     alert("Compra completada");
-    // }).catch(error => {
-    //     console.error("Error:", error);
-    //     alert("Hubo un problema con el procesamiento de tu compra.");
-    // });
-});
+}

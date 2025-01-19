@@ -1,11 +1,4 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+
 
 h2, h3, h4 {
     font-weight: bold;
@@ -123,4 +116,159 @@ a {
 
 .Main-Anuncio .Btn-Anuncio:hover {
     background-color: #1f6fa5;
+}
+
+/* Responsive para tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .Main {
+        width: 90%;
+        padding: 30px 0;
+    }
+
+    .Main-Title, .Main-Subtitulo {
+        font-size: 2rem;
+    }
+
+    .Main-Descripcion, .Main-Texto {
+        font-size: 1rem;
+    }
+
+    .Main-Imagen {
+        width: 90%;
+    }
+
+    .Main-Grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .Main-Grid-Img {
+        height: 180px;
+    }
+
+    .Main-Grid-Info h4 {
+        font-size: 1.3rem;
+    }
+
+    .Main-Grid-Info span {
+        font-size: 1rem;
+    }
+
+    .Main-Anuncio {
+        padding: 20px;
+    }
+
+    .Main-Anuncio h3 {
+        font-size: 1.8rem;
+    }
+
+    .Main-Anuncio p {
+        font-size: 1rem;
+    }
+
+    .Main-Anuncio .Btn-Anuncio {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive para móviles (320px - 768px) */
+@media (max-width: 768px) {
+    .Main {
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    .Main-Title, .Main-Subtitulo {
+        font-size: 1.8rem;
+    }
+
+    .Main-Descripcion, .Main-Texto {
+        font-size: 0.9rem;
+    }
+
+    .Main-Imagen {
+        width: 100%;
+    }
+
+    .Main-Grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10px;
+    }
+
+    .Main-Grid-Img {
+        height: 150px;
+    }
+
+    .Main-Grid-Info h4 {
+        font-size: 1.2rem;
+    }
+
+    .Main-Grid-Info span {
+        font-size: 0.9rem;
+    }
+
+    .Main-Anuncio {
+        padding: 15px;
+    }
+
+    .Main-Anuncio h3 {
+        font-size: 1.6rem;
+    }
+
+    .Main-Anuncio p {
+        font-size: 0.9rem;
+    }
+
+    .Main-Anuncio .Btn-Anuncio {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive para pantallas ultra pequeñas (menos de 320px) */
+@media (max-width: 320px) {
+    .Main {
+        padding: 15px 0;
+    }
+
+    .Main-Title, .Main-Subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .Main-Descripcion, .Main-Texto {
+        font-size: 0.8rem;
+    }
+
+    .Main-Imagen {
+        width: 100%;
+    }
+
+    .Main-Grid-Img {
+        height: 120px;
+    }
+
+    .Main-Grid-Info h4 {
+        font-size: 1rem;
+    }
+
+    .Main-Grid-Info span {
+        font-size: 0.8rem;
+    }
+
+    .Main-Anuncio {
+        padding: 10px;
+    }
+
+    .Main-Anuncio h3 {
+        font-size: 1.4rem;
+    }
+
+    .Main-Anuncio p {
+        font-size: 0.8rem;
+    }
+
+    .Main-Anuncio .Btn-Anuncio {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
 }

@@ -1,16 +1,12 @@
 // Función para cargar los productos desde el archivo JSON
 function cargarProductosDesdeJSON() {
     fetch('../Json/bd.json')
-        .then(response => response.json()) // Convertimos la respuesta en formato JSON
+        .then(response => response.json()) 
         .then(data => {
-            const contenedor = document.querySelector(".Main-Grid"); // Seleccionamos el contenedor donde se van a cargar los productos
-
-            // Iteramos sobre el array de productos
+            const contenedor = document.querySelector(".Main-Grid"); 
             data.productos.forEach(producto => {
                 const item = document.createElement('div');
                 item.classList.add("Main-Grid-Item");
-
-                // Crear slider de imágenes si hay múltiples
                 let sliderHTML = '';
                 if (producto.imagenes) {
                     producto.imagenes.forEach((imagen, index) => {
@@ -82,14 +78,9 @@ function cargarProductosDesdeJSON() {
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(id) {
-    // Obtener el producto desde los datos disponibles (JSON almacenado)
     const producto = obtenerProductoPorId(id);
-
     if (producto) {
-        // Obtener el carrito actual desde localStorage
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-        // Verificar si el producto ya está en el carrito
         if (!carrito.some(item => item.id === producto.id)) {
             carrito.push(producto);
             localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -106,18 +97,11 @@ function obtenerProductoPorId(id) {
     return productos.find(producto => producto.id === id);
 }
 
-
-
 // Función para agregar a favoritos
 function agregarAFavoritos(producto) {
-    // Obtenemos los productos favoritos desde localStorage, o un array vacío si no hay ninguno
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-    // Verificamos si el producto ya está en favoritos
     if (!favoritos.some(item => item.id === producto.id)) {
-        // Agregar el producto a favoritos
         favoritos.push(producto);
-        // Guardamos los favoritos actualizados en localStorage
         localStorage.setItem('favoritos', JSON.stringify(favoritos));
         alert('Producto agregado a favoritos');
     } else {
@@ -132,24 +116,19 @@ function inicializarSliders() {
         const btnPrev = item.querySelector('.Slider-Btn-Anterior');
         const btnNext = item.querySelector('.Slider-Btn-Siguiente');
         let currentIndex = 0;
-
         const updateImageVisibility = () => {
             images.forEach((img, index) => {
                 img.style.display = index === currentIndex ? 'block' : 'none';
             });
         };
-
         btnPrev.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateImageVisibility();
         });
-
         btnNext.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             updateImageVisibility();
         });
-
-        // Inicializa mostrando solo la primera imagen
         updateImageVisibility();
     });
 }

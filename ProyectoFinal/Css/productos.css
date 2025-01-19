@@ -1,124 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*BODY*/
-
-.Body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: white;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-
-/* HEADER */
-.Header {
-   
-    display: flex;
-    padding: 1em;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1em;
-}
-
-.Header-Logo {
-    top: 0;
-    left: 0;
-    display: inline-block;
-}
-
-.Header-LogoImagen {
-    width: 100px;
-    height: auto;
-    max-height: 100px;
-    display: block;
-
-}
-
-.NavUl {
-    display: flex;
-    list-style: none;
-
-}
-
-.NavUl-Link {
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.NavUl-Link:hover {
-    color: #007bff;
-}
-
-
-.Header-Busqueda {
-    display: flex;
-    align-items: center;
-}
-
-
-/* Busqueda */
-.Busqueda-Barra {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-.Busqueda-Boton {
-    padding: 5px 10px;
-    border: none;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.Busqueda-Boton:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-
-
-/* Iconos */
-.Header-Iconos {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-    gap: 2rem;
-}
-
-.Icono-Link {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    /* Tamaño del ícono */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
-    /* Efecto suave en hover */
-}
-
-.Icono-Link:hover,
-.Usuario-Link:hover {
-    color: #007bff;
-}
-
-
-
-
-/*MAIN*/
-
 /* MAIN */
 .Main {
     margin: 30px auto;
@@ -151,12 +30,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada 
-    */
-    background-color: #f0f0f0; /* Color de fondo para relleno */
+    aspect-ratio: 1 / 1;
+    background-color: #f0f0f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 
 .Main-Grid-Img {
     width: 100%;
@@ -194,77 +71,77 @@
 
 .Main-Grid-Iconos {
     position: absolute;
-    top: 10px; /* Distancia desde la parte superior */
-    right: 10px; /* Distancia desde el borde derecho */
+    top: 10px;
+    right: 10px;
     display: flex;
-    flex-direction: column; /* Esto pone los íconos uno debajo del otro */
-    gap: 10px; /* Espacio entre los íconos */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .Main-Grid-Favorito,
 .Main-Grid-Carrito {
-    font-size: 20px; /* Tamaño de los íconos */
+    font-size: 20px;
 }
 
 .Main-Grid-Favorito a,
 .Main-Grid-Carrito a {
-    color: white; /* Color de los íconos */
-    text-decoration: none; /* Quitar subrayado */
+    color: white;
+    text-decoration: none;
 }
 
 .Main-Grid-Favorito span,
 .Main-Grid-Carrito span {
-    font-size: inherit; /* Hereda el tamaño de la fuente del contenedor */
-    color: inherit; /* Hereda el color del contenedor */
+    font-size: inherit;
+    color: inherit;
 }
 
 .Main-Grid-Favorito span:hover,
 .Main-Grid-Carrito span:hover {
-    color: #FF4081; /* Cambia el color al pasar el ratón */
+    color: #FF4081;
 }
 
 .Main-Grid-Precio {
     position: absolute;
-    bottom: 10px; /* Coloca el precio en la parte inferior */
-    right: 10px; /* Colócalo en la esquina derecha */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para que el texto sea legible */
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 18px; /* Tamaño del precio */
+    font-size: 18px;
 }
 
-/*Cta */
+/* Cta */
 
 /* Sección de Llamada a la Acción */
 .Main-Section-Cta {
-    background-color:  #f39c12;; 
-    color: white; 
-    padding: 40px 20px; 
-    text-align:center; 
+    background-color:  #f39c12;
+    color: white;
+    padding: 40px 20px;
+    text-align:center;
 }
 
 .Section-Container-Cta {
-    max-width: 900px; /* Limita el ancho para no ser demasiado grande */
-    margin: 0 auto; /* Centra el contenedor */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .Cta-Heading {
-    font-size: 32px; /* Tamaño grande para el título */
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px; /* Espaciado debajo del título */
+    margin-bottom: 20px;
 }
 
 .Cta-P {
-    font-size: 18px; /* Tamaño del texto descriptivo */
-    margin-bottom: 30px; /* Espaciado debajo del texto */
-    line-height: 2; /* Espaciado entre líneas para mayor legibilidad */
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 2;
 }
 
 .Cta-Botones {
     display: flex;
-    justify-content: center; /* Centra los botones */
-    gap: 20px; /* Espacio entre los botones */
+    justify-content: center;
+    gap: 20px;
 }
 
 .Cta-Boton {
@@ -277,28 +154,17 @@
     cursor: pointer;
     text-decoration: none;
 }
+
 .Cta-Boton:hover {
     background-color: #1f6fa5;
 }
 
-
 .Cta-boton.activo {
-    transform: scale(0.95); /* El botón se reduce ligeramente */
-    box-shadow: none; /* Elimina la sombra */
+    transform: scale(0.95);
+    box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* FOOTER*/ 
+/* FOOTER */
 .Footer {
     padding: 1rem;
     display: flex;
@@ -317,18 +183,18 @@
 
 .Footer-Section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea un grid de 3 columnas */
-    gap: 20px; /* Espacio entre las columnas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
     width: 100%;
-    justify-items: center
+    justify-items: center;
 }
 
 .Section-Sucursal {
-    background-color: #f0f0f0; /* Fondo claro para cada sucursal */
+    background-color: #f0f0f0;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Sucursal-Nombre {
@@ -379,4 +245,69 @@
     color: #FF4081;
 }
 
+/* Estilos Responsivos */
 
+/* Para pantallas medianas */
+@media (max-width: 1024px) {
+    .Main-Grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .Main-Grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Main-Section-Cta {
+        padding: 30px 15px;
+    }
+
+    .Cta-Heading {
+        font-size: 28px;
+    }
+
+    .Cta-P {
+        font-size: 16px;
+    }
+
+    .Cta-Boton {
+        font-size: 1rem;
+    }
+
+    .Footer-Section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+    .Main-Grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Main-Grid-Item {
+        aspect-ratio: 16 / 9; /* Cambia la relación de aspecto a rectangular */
+    }
+
+    .Main-Section-Cta {
+        padding: 20px;
+    }
+
+    .Cta-Heading {
+        font-size: 24px;
+    }
+
+    .Cta-P {
+        font-size: 14px;
+    }
+
+    .Cta-Boton {
+        font-size: 0.9rem;
+    }
+
+    .Footer-Section {
+        grid-template-columns: 1fr;
+    }
+}

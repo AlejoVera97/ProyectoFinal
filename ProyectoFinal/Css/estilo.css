@@ -5,8 +5,7 @@
     box-sizing: border-box;
 }
 
-
-/*BODY*/
+/* BODY */
 .Body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: white;
@@ -17,7 +16,6 @@
     gap: 1rem;
     padding: 1rem;
 }
-
 
 /* HEADER */
 .Header {
@@ -48,8 +46,6 @@
     color: black;
 }
 
-
-
 /* Barra de Busqueda */
 .Header-Busqueda {
     display: flex;
@@ -73,8 +69,6 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
-
-
 /* Iconos: Carrito, Favorito y Usuario */
 .Header-Iconos {
     display: flex;
@@ -91,19 +85,16 @@
     align-items: center;
     transition: background-color 0.3s ease;
 }
-.Icono-Link:hover{
+.Icono-Link:hover {
     color: #007bff;
 }
 
-
-
-
-/*MAIN*/
+/* MAIN */
 /* Contenedor del slider */
 .slider {
     position: relative;
     width: 100%;
-    height: 500px; 
+    height: 500px; /* Altura del slider */
     overflow: hidden;
     margin-top: 50px;
 }
@@ -129,17 +120,16 @@
 }
 
 /* Estilo de la imagen dentro de cada diapositiva */
-    .slide-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center; 
-        z-index: -1;
-    }
-
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+    z-index: -1;
+}
 
 /* Estilo del título */
 .slide h3 {
@@ -193,10 +183,8 @@
     background-color: #717171;
 }
 
-
-
-/* Section de empresa */ 
-.Main-Section{
+/* Section de empresa */
+.Main-Section {
     margin: 50px auto;
     padding: 20px;
     max-width: 800px;
@@ -206,13 +194,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.Section-Titulo{
+.Section-Titulo {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.Section-P{
+.Section-P {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
@@ -234,14 +222,12 @@
     background-color: #45a049; 
 }
 
-/* Section de maderas */ 
-
+/* Section de maderas */
 .hover-slider {
     position: relative;
     width: 100%; 
     height: 400px;
     overflow: hidden;
-    
 }
 
 /* Contenedor de todos los slides */
@@ -261,7 +247,6 @@
     transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-
 .hover-slide img {
     width: 100%; 
     height: 100%; 
@@ -273,6 +258,7 @@
 .hover-slide:hover img {
     transform: scale(1.2);
 }
+
 .hover-slide-text {
     position: absolute;
     bottom: 10px;
@@ -285,22 +271,22 @@
     transition: opacity 0.3s ease;
     width: calc(100% - 20px); 
 }
+
 .hover-slide:hover .hover-slide-text {
     opacity: 1;
 }
+
 .hover-slide-text h3 {
     margin: 0;
     font-size: 1.5rem;
 }
+
 .hover-slide-text p {
     margin: 5px 0 0;
     font-size: 1rem;
 }
 
-
-
-
-/* FOOTER*/ 
+/* FOOTER */
 .Footer {
     padding: 1rem;
     display: flex;
@@ -309,6 +295,7 @@
     flex-wrap: wrap;
     border-top: 1px solid lightgray;
 }
+
 .Footer-P {
     font-size: 14px;
     color: #666;
@@ -377,7 +364,65 @@
 }
 
 .NavUl-Link:hover {
-    color:#007bff;
+    color: #007bff;
 }
 
+/* Media Queries */
+@media (max-width: 1024px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .Header-LogoImagen {
+        width: 80px;
+    }
+
+    .NavUl {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .slider {
+        height: 400px;
+    }
+
+    .slider-container {
+        flex-direction: column;
+    }
+
+    .hover-slide {
+        flex: 0 0 45%;
+    }
+
+    .Footer-Section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+
+    .NavUl {
+        flex-direction: column;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .slider-container {
+        flex-direction: column;
+    }
+
+    .hover-slide {
+        flex: 0 0 100%;
+    }
+
+    .Footer-Section {
+        grid-template-columns: 1fr;
+    }
+}

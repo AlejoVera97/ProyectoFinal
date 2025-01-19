@@ -4,9 +4,9 @@ const formulario = document.getElementById("contacto-formulario"); // Ahora se r
 // 2) Eventos
 document.addEventListener("DOMContentLoaded", () => {
     formulario.addEventListener("submit", (e) => {
-        e.preventDefault(); // Evita el envío del formulario por defecto
+        e.preventDefault(); 
 
-        // Captura de los campos
+       
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
@@ -41,12 +41,8 @@ function mostrarMensaje(mensaje, tipo) {
     const mensajeDiv = document.createElement("div");
     mensajeDiv.className = `mensaje ${tipo}`;
     mensajeDiv.textContent = mensaje;
-
-    // Añadir el mensaje al DOM
     const contenedor = document.querySelector(".Formulario-Section");
     contenedor.prepend(mensajeDiv);
-
-    // Eliminar el mensaje después de 3 segundos
     setTimeout(() => mensajeDiv.remove(), 3000);
 }
 

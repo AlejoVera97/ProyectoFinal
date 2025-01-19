@@ -107,3 +107,83 @@
     font-size: 0.9rem;
     color: #555555;
 }
+
+/* Responsive para tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .Formulario-Section {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .Formulario-Titulo {
+        font-size: 1.3rem;
+    }
+
+    .Formulario-Boton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .Vendedores-Grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .Vendedor-Tarjeta {
+        padding: 1rem;
+    }
+
+    .Vendedor-Imagen {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Vendedor-Nombre {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive para iPhone (320px - 428px) */
+@media (max-width: 428px) {
+    .Formulario-Section {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .Formulario-Titulo {
+        font-size: 1.2rem;
+    }
+
+    .Formulario-Campo input,
+    .Formulario-Campo textarea {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .Formulario-Boton {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .Vendedores-Titulo {
+        font-size: 1.3rem;
+    }
+
+    .Vendedores-Grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .Vendedor-Imagen {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Vendedor-Nombre {
+        font-size: 0.9rem;
+    }
+
+    .Vendedor-Telefono,
+    .Vendedor-Correo {
+        font-size: 0.8rem;
+    }
+}

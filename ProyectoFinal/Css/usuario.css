@@ -70,11 +70,75 @@
     color: #fff;
     border: none;
     padding: 10px;
-    borde
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .Boton-Toggle.seleccionado {
-    background-color:#0056b3; /* Color más oscuro para el botón seleccionado */
-    color: #fff; /* Asegúrate de que el texto siga siendo visible */
-    border: 2px solid #003f7f; /* Opcional: Añadir un borde para destacarlo */
+    background-color: #0056b3;
+    color: #fff;
+    border: 2px solid #003f7f;
+}
+
+/* Estilos Responsivos */
+
+/* Para pantallas medianas */
+@media (max-width: 1024px) {
+    .Seccion-Autenticacion {
+        max-width: 350px;
+    }
+
+    .Boton-Toggle {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .Formulario-Autenticacion input {
+        font-size: 13px;
+    }
+
+    .Boton-Autenticacion {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .Seccion-Autenticacion {
+        max-width: 300px;
+    }
+
+    .Boton-Toggle {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .Formulario-Autenticacion input {
+        font-size: 12px;
+    }
+
+    .Boton-Autenticacion {
+        font-size: 14px;
+    }
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 480px) {
+    .Seccion-Autenticacion {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .Boton-Toggle {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .Formulario-Autenticacion input {
+        font-size: 12px;
+    }
+
+    .Boton-Autenticacion {
+        font-size: 14px;
+    }
 }
