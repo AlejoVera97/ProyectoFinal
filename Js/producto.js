@@ -1,6 +1,6 @@
 // Función para cargar los productos desde el archivo JSON
 function cargarProductosDesdeJSON() {
-    fetch('../json/bd.json')
+    fetch('../Json/bd.json')
         .then(response => response.json()) 
         .then(data => {
             const contenedor = document.querySelector(".Main-Grid"); 
